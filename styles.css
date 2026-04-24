@@ -1046,6 +1046,13 @@ section { position: relative; }
   font-weight: 450;
 }
 
+.prose .seller-address {
+  font-style: normal;
+  margin: 0.75rem 0 1.35rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
 /* ============================================== CALLOUT CARDS */
 
 .callout {
