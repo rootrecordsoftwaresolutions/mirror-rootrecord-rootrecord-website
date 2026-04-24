@@ -37,8 +37,15 @@ RootRecord — maker of local-first Windows desktop software (Business Manager, 
 
 ## Next action items
 1. Deploy to Cloudflare Pages (`npx wrangler pages deploy .`) and verify `/api/site-config` returns the production `ROOTRECORD_API_BASE`
-2. Add a 32px/180px favicon + apple-touch-icon in `/public`
-3. Plug in real app screenshots when available
+2. Plug in real app screenshots when available (product pages still use the brand artwork as decorative visual)
+
+## Assets shipped (2026-04-24)
+- `/favicon.ico` (multi-resolution 16/32/48 from tree-icon crop of brand artwork)
+- `/favicon-16.png`, `/favicon-32.png`, `/favicon-180.png` (apple-touch-icon)
+- `/assets/icon-192.png`, `/assets/icon-512.png` (PWA manifest icons)
+- `/assets/og.jpg` — 1200x630 Open Graph / Twitter card (tree artwork + RootRecord brand + tagline)
+- `/site.webmanifest` — PWA manifest with theme color #081C2B
+- Full OG + Twitter meta tags wired into all 11 HTML pages with per-page title/description + canonical URL
 
 ## Personas
 - **Independent operator (primary)** — runs a small shop, wants real books, distrusts SaaS lock-in
