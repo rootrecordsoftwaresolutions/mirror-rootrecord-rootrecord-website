@@ -15,9 +15,10 @@ RootRecord — maker of local-first Windows desktop software (Business Manager, 
 ## What was done (2026-04-24 — modernization sprint)
 - Complete visual redesign using a new design system in `styles.css`:
   - **Typography**: Fraunces (variable serif display with italic accents) + Geist (sans body) + JetBrains Mono (metadata/kickers)
-  - **Palette**: warm cream paper `#F5EFE4`, deep forest green `#1F3B2E`, ink `#0E1A14`, sand + moss-glow accents, subtle grain texture overlay
-  - **Components**: pill buttons, glass-blur sticky header, mocked app-window hero illustration with animated KPI bars, feature cards with radial-glow hover, pricing cards (featured plan in dark), dark `cta-band`, 4-column dark footer, FAQ accordion-style items, editorial long-form prose for legal pages
+  - **Palette (dark neon brand — matches user-supplied artwork)**: midnight navy `#081C2B` + emerald gradient `#0D2F22` background, electric green `#3FE28D` primary accent, cyan `#5CE1F0` secondary, sun yellow `#FCD34D` highlight, near-white `#E7F3EC` text. Cards use `#0F2232` surface with `#13304A` hover.
+  - **Components**: pill buttons with neon-green glow, glass-blur sticky header, real brand artwork as hero visual (at `/assets/hero.jpg`) with two floating glass-blur badges ("Rooted locally" / "Optional cloud"), feature cards with radial-glow hover, pricing cards (featured plan with emerald gradient + neon border + glow), dark `cta-band`, 4-column footer with neon-green top rule, FAQ accordion-style items, editorial long-form prose for legal pages
 - All 11 pages rewritten with new structure & shared header/footer: `index.html`, `products.html`, `pricing.html`, `about.html`, `faq.html`, `contact.html`, `privacy.html`, `terms.html`, `account.html`, `rootrecord-business-manager.html`, `rootrecord-weather-manager.html`
+- Hero artwork + secondary brand image stored in `/app/assets/` (hero.jpg, brand.jpg) — deploys with the Pages project automatically
 - **Preserved all `account.js` selectors** (status, panel-loading, panel-forms, panel-account, form-login, login-email, login-password, form-signup, signup-email, signup-password, account-details, billing-intro, billing-unavailable, billing-actions, billing-email, btn-billing, btn-logout) so production license-worker integration is untouched
 - Preserved all external URLs (GitHub releases, Discord invite, X, rootrecord.info/billing, /auth/signup, etc.)
 - Mobile nav toggle + responsive breakpoints at 880/760/640
