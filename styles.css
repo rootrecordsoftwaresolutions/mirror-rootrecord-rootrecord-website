@@ -1,0 +1,464 @@
+:root {
+  --bg: #f8f6f3;
+  --text: #1a1a1a;
+  --text-soft: #4a4a4a;
+  --accent: #166534;
+  --accent-light: #22c55e;
+  --line: #e5e2de;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  min-height: 100vh;
+  padding: clamp(2rem, 8vw, 4rem);
+}
+
+.page {
+  max-width: 42rem;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+nav a {
+  color: var(--text-soft);
+  text-decoration: none;
+  margin-right: 1.25rem;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+.banner {
+  background: var(--accent);
+  color: white;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.banner p {
+  margin: 0;
+  color: inherit;
+}
+
+/* Future: .banner will hold sign in / create account / my account buttons */
+
+header {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+h1 {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 400;
+  margin: 0;
+  color: var(--text);
+}
+
+.tagline {
+  font-size: 1rem;
+  color: var(--text-soft);
+  margin-top: 0.25rem;
+}
+
+main {
+  flex: 1;
+  padding-top: 2rem;
+}
+
+main p, main li {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-soft);
+  margin: 0 0 1rem;
+}
+
+main p:last-child {
+  margin-bottom: 0;
+}
+
+main ul {
+  padding-left: 1.5rem;
+  margin: 0 0 1.5rem;
+}
+
+main li {
+  margin-bottom: 0.5rem;
+}
+
+main h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 2rem 0 0.75rem;
+}
+
+main h2:first-child {
+  margin-top: 0;
+}
+
+main h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 1.5rem 0 0.5rem;
+}
+
+main a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+main a:hover {
+  color: var(--accent-light);
+  text-decoration: underline;
+}
+
+main code {
+  background: var(--line);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.highlight {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: var(--text-soft);
+  margin-bottom: 1.5rem;
+}
+
+.card-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (min-width: 640px) {
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.25rem 1.35rem;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.card-hero {
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(22, 101, 52, 0.12);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.15rem;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem !important;
+  margin-bottom: 0 !important;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  background: var(--accent);
+  color: #fff !important;
+  border: none;
+}
+
+.btn:hover {
+  background: var(--accent-light);
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: var(--accent) !important;
+  border: 2px solid var(--accent);
+}
+
+.btn-secondary:hover {
+  background: var(--bg);
+  color: var(--accent) !important;
+  text-decoration: none;
+}
+
+/* Optional bright CTA (e.g. external partner links) */
+.btn-store {
+  background: #0078d4;
+  color: #fff !important;
+}
+
+.btn-store:hover {
+  background: #106ebe;
+  color: #fff !important;
+}
+
+main .btn:hover {
+  text-decoration: none;
+}
+
+.note {
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  margin-top: 1rem !important;
+  margin-bottom: 0 !important;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  color: var(--accent-light);
+  text-decoration: underline;
+}
+
+/* Account portal */
+.status {
+  min-height: 1.25rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.status-err {
+  color: #b91c1c;
+}
+
+.status-warn {
+  color: #a16207;
+}
+
+.status-ok {
+  color: var(--accent);
+}
+
+.stack-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 22rem;
+  margin-bottom: 2rem;
+}
+
+.stack-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.stack-form input {
+  font: inherit;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.account-grid {
+  margin: 1rem 0 1.5rem;
+}
+
+.account-row {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  gap: 0.5rem 1rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+.account-k {
+  color: var(--text-soft);
+  font-weight: 600;
+}
+
+.account-v {
+  word-break: break-all;
+}
+
+nav a[aria-current="page"] {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.breadcrumb {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  margin: 0 0 0.75rem;
+}
+
+.breadcrumb a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+ul.product-cards {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 36rem) {
+  ul.product-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+  padding: 1.25rem 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.product-card:hover {
+  border-color: var(--accent-light);
+  box-shadow: 0 4px 14px rgba(22, 101, 52, 0.12);
+  text-decoration: none;
+}
+
+a.product-card,
+a.product-card:hover {
+  color: inherit;
+}
+
+.product-card-title {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.product-card-desc {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--text-soft);
+  flex: 1;
+}
+
+.product-card-cta {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 0.25rem;
+}
+
+main a.product-card .product-card-title {
+  color: var(--text);
+}
+
+main a.product-card .product-card-desc {
+  color: var(--text-soft);
+}
+
+.pricing-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin: 1.75rem 0 2rem;
+}
+
+@media (min-width: 48rem) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+  }
+}
+
+.pricing-card h2 {
+  margin-top: 0;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.pricing-price {
+  font-size: 1.35rem;
+  margin: 0.5rem 0 1rem;
+  color: var(--text);
+}
+
+.pricing-per {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-soft);
+}
+
+.pricing-card-featured {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(22, 101, 52, 0.12);
+}

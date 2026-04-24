@@ -1,0 +1,15 @@
+# Cloudflare Pages — static site + small Functions (API base for account portal).
+# Deploy: npm install && npx wrangler pages deploy . --project-name=rootrecord-website
+#
+# Custom domain (e.g. rootrecord.info):
+# 1. Cloudflare dashboard → Workers & Pages → rootrecord-website → Custom domains → Set up a domain.
+# 2. Enter rootrecord.info (and/or www). Zone must use Cloudflare DNS, or follow the CNAME instructions.
+# 3. If this hostname was used elsewhere, remove it from the old Worker/Pages project first.
+# 4. License Worker CORS (cloudflare/wrangler.toml) must list your site origin(s) — see CORS_ALLOW_ORIGIN there.
+name = "rootrecord-website"
+compatibility_date = "2024-11-01"
+pages_build_output_dir = "."
+
+[vars]
+# License Worker origin (no trailing slash). Override per-environment in the Pages dashboard if needed.
+ROOTRECORD_API_BASE = "https://rootrecord-license.wildecho94.workers.dev"

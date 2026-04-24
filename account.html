@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account — RootRecord</title>
+  <meta name="description" content="Sign in to your RootRecord account: subscription status and billing from the web.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="page">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/products.html">Products</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/about.html">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/account.html" aria-current="page">Account</a>
+    </nav>
+
+    <header>
+      <h1>Account</h1>
+      <p class="tagline">Sign in to see subscription status and open billing. Your desktop database stays on your PC.</p>
+    </header>
+
+    <main>
+      <p id="status" class="status" role="status"></p>
+
+      <section id="panel-loading" class="card" hidden>
+        <p>Loading…</p>
+      </section>
+
+      <section id="panel-forms" class="card" hidden>
+        <p class="lead">Use the same email and password as in <strong>RootRecord Business Manager</strong> (at least 10 characters). Signing in here does not replace the app on your PC.</p>
+
+        <h2>Sign in</h2>
+        <form id="form-login" class="stack-form">
+          <label>Email <input type="email" id="login-email" name="email" autocomplete="username" required></label>
+          <label>Password <input type="password" id="login-password" name="password" autocomplete="current-password" required></label>
+          <button type="submit" class="btn">Sign in</button>
+        </form>
+
+        <h2>Create account</h2>
+        <p class="note">New signups from this page start a trial. If you already use RootRecord on a PC, sign in with the same email after you have set a password in the app.</p>
+        <form id="form-signup" class="stack-form">
+          <label>Email <input type="email" id="signup-email" name="email" autocomplete="username" required></label>
+          <label>Password <input type="password" id="signup-password" name="password" autocomplete="new-password" required minlength="10"></label>
+          <button type="submit" class="btn">Create account</button>
+        </form>
+      </section>
+
+      <section id="panel-account" class="card" hidden>
+        <h2>Your account</h2>
+        <div id="account-details" class="account-grid"></div>
+        <p id="billing-intro" class="note">You can manage your plan in the desktop app, or use checkout below when it is available. After payment, you can come back here or to the app.</p>
+        <p id="billing-unavailable" class="note" hidden>
+          Paying on the web from this page is not available right now. Please use <strong>Activate Services</strong> or billing inside the RootRecord app on your computer.
+        </p>
+        <div id="billing-actions" class="stack-form">
+          <label>Email for checkout <input type="email" id="billing-email" autocomplete="email"></label>
+          <button type="button" class="btn" id="btn-billing">Continue to payment</button>
+        </div>
+        <p><button type="button" class="btn btn-secondary" id="btn-logout">Sign out</button></p>
+      </section>
+    </main>
+
+    <footer>
+      <a href="https://rootrecord.info/">rootrecord.info</a>
+    </footer>
+  </div>
+  <script src="/account.js" defer></script>
+</body>
+</html>
