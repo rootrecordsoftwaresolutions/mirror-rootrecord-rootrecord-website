@@ -1,59 +1,123 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FAQ — RootRecord</title>
-  <meta name="description" content="FAQ: RootRecord products for Windows, rootrecord.info account, install, and billing.">
+  <meta name="description" content="FAQ: RootRecord products for Windows, rootrecord.info account, install, and billing — answered in plain language.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Geist:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <div class="page">
-    <nav>
-      <a href="/">Home</a>
-      <a href="/products.html">Products</a>
-      <a href="/pricing.html">Pricing</a>
-      <a href="/about.html">About</a>
-      <a href="/faq.html" aria-current="page">FAQ</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-      <a href="/account.html">Account</a>
-    </nav>
-
-    <header>
-      <h1>FAQ</h1>
-      <p class="tagline">RootRecord apps and rootrecord.info account</p>
+  <div class="site">
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <a class="brand" href="/"><span class="brand-mark">R</span>RootRecord</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="document.querySelector('.site-nav').classList.toggle('is-open');this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true');">Menu</button>
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/products.html">Products</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about.html">About</a>
+          <a href="/faq.html" aria-current="page">FAQ</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/account.html" class="nav-cta">Account →</a>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <p>Quick answers for <strong>RootRecord</strong> desktop programs (Windows) and your <strong>rootrecord.info</strong> account used with online features.</p>
+    <main class="site-main">
+      <section class="page-header">
+        <div class="container">
+          <div class="page-header-inner">
+            <p class="breadcrumb">FAQ</p>
+            <h1 class="page-title"><em>Straight</em> answers.</h1>
+            <p class="page-lead">Quick answers for RootRecord desktop programs (Windows) and your rootrecord.info account used with online features.</p>
+          </div>
+        </div>
+      </section>
 
-      <h2>Install and updates (Windows)</h2>
-      <p><strong>How do I install?</strong><br>Each program lists its download on its own page. Start from <a href="/products.html">Products</a>, then open <a href="/rootrecord-business-manager.html">RootRecord Business Manager</a> or <a href="/rootrecord-weather-manager.html">Root Record Weather Manager</a> for the latest installer links.</p>
+      <section class="section">
+        <div class="container-narrow">
+          <h2 class="faq-section-title">Install &amp; updates (Windows)</h2>
+          <div class="faq-list" data-testid="faq-install">
+            <div class="faq-item">
+              <h3>How do I install?</h3>
+              <p>Each program lists its download on its own page. Start from <a href="/products.html" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Products</a>, then open <a href="/rootrecord-business-manager.html" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">RootRecord Business Manager</a> or <a href="/rootrecord-weather-manager.html" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Root Record Weather Manager</a> for the latest installer links.</p>
+            </div>
+          </div>
 
-      <h2>Web account</h2>
-      <p><strong>How do I create an account?</strong><br>Open <a href="/account.html">Account</a> on this site to sign up or sign in. If you use the rootrecord.info web app, you can also use <a href="https://rootrecord.info/auth/signup">Sign up</a> and manage your profile at <a href="https://rootrecord.info/account">Account</a>.</p>
-      <p><strong>What plans exist?</strong><br>See <a href="/pricing.html">Pricing</a> for Free, Monthly, and Lifetime in plain language. The <a href="https://rootrecord.info/billing">Billing</a> page and <a href="/terms.html">Terms</a> have the full legal detail. Your desktop apps may use the same account and plan where the product is set up that way.</p>
-      <p><strong>Trials and renewals?</strong><br>Trial and renewal rules for eligible plans are on Billing and in <a href="/terms.html">Terms</a>. Recurring plans bill through our payment provider until you cancel as described there.</p>
+          <h2 class="faq-section-title">Web account</h2>
+          <div class="faq-list" data-testid="faq-account">
+            <div class="faq-item">
+              <h3>How do I create an account?</h3>
+              <p>Open <a href="/account.html" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Account</a> on this site to sign up or sign in. If you use the rootrecord.info web app, you can also use <a href="https://rootrecord.info/auth/signup" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Sign up</a> and manage your profile at <a href="https://rootrecord.info/account" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Account</a>.</p>
+            </div>
+            <div class="faq-item">
+              <h3>What plans exist?</h3>
+              <p>See <a href="/pricing.html" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Pricing</a> for Free, Monthly, and Lifetime in plain language. The <a href="https://rootrecord.info/billing" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Billing</a> page and <a href="/terms.html" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Terms</a> have the full legal detail. Your desktop apps may use the same account and plan where the product is set up that way.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Trials and renewals?</h3>
+              <p>Trial and renewal rules for eligible plans are on Billing and in <a href="/terms.html" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Terms</a>. Recurring plans bill through our payment provider until you cancel as described there.</p>
+            </div>
+          </div>
 
-      <h2>RootRecord Business Manager (desktop)</h2>
-      <p><strong>Where is my data stored?</strong><br>Your operational database file is stored <strong>locally</strong> on your computer (the app shows the path). Back it up like any important file; the app can run scheduled <strong>local backups</strong>.</p>
-      <p><strong>Do I need an account?</strong><br>No for core time, money, clients, inventory, and reports. A <strong>RootRecord account</strong> is used for subscription, sync, and optional secure online backup copy when you enable them.</p>
-      <p><strong>Why do “hours worked” totals differ from a raw sum of rows?</strong><br>Overlapping clock intervals are merged for <strong>unique clock coverage</strong> so you are not double-counted when two blocks share the same minutes.</p>
-      <p><strong>Can I use the app offline?</strong><br>Yes for core workflows. Sign-in, sync, and secure backup copy need connectivity when you use them.</p>
-      <p><strong>What if my trial ends or payment is past due?</strong><br>The app may switch to <strong>read-only</strong> until billing is current; use <strong>Billing</strong> on the web or in-app links to fix payment, then refresh status.</p>
+          <h2 class="faq-section-title">RootRecord Business Manager (desktop)</h2>
+          <div class="faq-list" data-testid="faq-business">
+            <div class="faq-item">
+              <h3>Where is my data stored?</h3>
+              <p>Your operational database file is stored <strong style="color:var(--ink)">locally</strong> on your computer (the app shows the path). Back it up like any important file; the app can run scheduled local backups.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Do I need an account?</h3>
+              <p>No for core time, money, clients, inventory, and reports. A RootRecord account is used for subscription, sync, and optional secure online backup when you enable them.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Why do "hours worked" totals differ from a raw sum of rows?</h3>
+              <p>Overlapping clock intervals are merged for <strong style="color:var(--ink)">unique clock coverage</strong> so you are not double-counted when two blocks share the same minutes.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Can I use the app offline?</h3>
+              <p>Yes for core workflows. Sign-in, sync, and secure backup copy need connectivity when you use them.</p>
+            </div>
+            <div class="faq-item">
+              <h3>What if my trial ends or payment is past due?</h3>
+              <p>The app may switch to <strong style="color:var(--ink)">read-only</strong> until billing is current; use Billing on the web or in-app links to fix payment, then refresh status.</p>
+            </div>
+          </div>
 
-      <h2>More help</h2>
-      <p>Field help lives <strong>inside each app</strong> (for example Business Manager: <strong>About &amp; Help</strong> → user guide). Community: <a href="https://discord.gg/CPaDYuFkU" target="_blank" rel="noopener">Discord</a>. <a href="/pricing.html">Pricing</a> · <a href="/contact.html">Contact</a> · <a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a></p>
+          <h2 class="faq-section-title">More help</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <h3>Where is full documentation?</h3>
+              <p>Field help lives inside each app (for example Business Manager: <strong style="color:var(--ink)">About &amp; Help → user guide</strong>). Community: <a href="https://discord.gg/CPaDYuFkU" target="_blank" rel="noopener" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Discord</a>. See also <a href="/pricing.html" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Pricing</a> · <a href="/contact.html" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Contact</a> · <a href="/terms.html" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Terms</a> · <a href="/privacy.html" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Privacy</a>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-      <a href="/">Home</a> · <a href="/contact.html">Contact</a>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="/"><span class="brand-mark">R</span>RootRecord</a>
+            <p>Local-first Windows desktop software for people who run real operations — with optional cloud when you choose it.</p>
+          </div>
+          <div class="footer-col"><h4>Products</h4><ul><li><a href="/rootrecord-business-manager.html">Business Manager</a></li><li><a href="/rootrecord-weather-manager.html">Weather Manager</a></li><li><a href="/products.html">All products</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div>
+          <div class="footer-col"><h4>Company</h4><ul><li><a href="/about.html">About</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/account.html">Account</a></li></ul></div>
+          <div class="footer-col"><h4>Community</h4><ul><li><a href="https://discord.gg/CPaDYuFkU" target="_blank" rel="noopener">Discord</a></li><li><a href="https://x.com/RootRecord" target="_blank" rel="noopener">X (Twitter)</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/privacy.html">Privacy</a></li></ul></div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="yr">2026</span> RootRecord · <a href="https://rootrecord.info/">rootrecord.info</a></span>
+          <span>Built local-first on Windows.</span>
+        </div>
+      </div>
     </footer>
   </div>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>

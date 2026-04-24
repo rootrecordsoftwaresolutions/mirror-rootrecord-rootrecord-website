@@ -7,58 +7,114 @@
   <meta name="description" content="RootRecord Business Manager for Windows: local-first time, money, clients, inventory, scheduling, and reports. Download the installer from GitHub Releases.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Geist:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <div class="page">
-    <nav>
-      <a href="/">Home</a>
-      <a href="/products.html">Products</a>
-      <a href="/pricing.html">Pricing</a>
-      <a href="/about.html">About</a>
-      <a href="/faq.html">FAQ</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-      <a href="/account.html">Account</a>
-    </nav>
-
-    <header>
-      <p class="breadcrumb"><a href="/products.html">Products</a> · RootRecord Business Manager</p>
-      <h1>RootRecord Business Manager</h1>
-      <p class="tagline">Local-first operations on your Windows PC</p>
+  <div class="site">
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <a class="brand" href="/"><span class="brand-mark">R</span>RootRecord</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="document.querySelector('.site-nav').classList.toggle('is-open');this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true');">Menu</button>
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/products.html" aria-current="page">Products</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about.html">About</a>
+          <a href="/faq.html">FAQ</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/account.html" class="nav-cta">Account →</a>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <p class="lead"><span class="highlight">Time, money, clients, stock, scheduling, work log, and reports</span> in one desktop workspace. Your primary database file stays on your machine; sync and secure online backup are optional when you enable them.</p>
-
-      <section class="card card-hero">
-        <h2>Install (Windows)</h2>
-        <p><strong>GitHub Releases</strong> hosts the latest Windows <code>.exe</code> installer for each version.</p>
-        <p class="cta-row">
-          <a class="btn" href="https://github.com/RootRecord/rootrecord-business-manager-download/releases/latest" target="_blank" rel="noopener">Download installer (GitHub)</a>
-        </p>
-        <p class="note">In the app, <strong>About &amp; Help</strong> shows your build and documentation.</p>
+    <main class="site-main">
+      <section class="page-header">
+        <div class="container">
+          <div class="page-header-inner">
+            <p class="breadcrumb"><a href="/products.html">Products</a> / Business Manager</p>
+            <h1 class="page-title">RootRecord <em>Business Manager</em>.</h1>
+            <p class="page-lead">Time, money, clients, stock, scheduling, work log, and reports — one local-first desktop workspace for Windows.</p>
+          </div>
+        </div>
       </section>
 
-      <h2>What you get</h2>
-      <ul>
-        <li><strong>Time tracking</strong> and work log with sensible totals (overlapping clock intervals are merged so minutes are not double-counted).</li>
-        <li><strong>Money and clients</strong>, invoices, categories, projects, and tags.</li>
-        <li><strong>Inventory and supplies</strong>, <strong>schedule</strong>, and <strong>reports / exports</strong> you can stand behind.</li>
-        <li><strong>Offline-first</strong> core workflows; sign-in for subscription, sync, and optional cloud backup when you use those features.</li>
-      </ul>
+      <section class="section">
+        <div class="container">
+          <div class="callout callout-hero" data-testid="install-callout-business">
+            <h2 style="font-family:var(--font-display);font-weight:400;font-size:1.5rem;margin:0 0 0.75rem;letter-spacing:-0.01em">Install for Windows</h2>
+            <p style="margin:0">GitHub Releases hosts the latest Windows <code>.exe</code> installer for each version. In the app, <strong style="color:var(--paper-2)">About &amp; Help</strong> shows your build and documentation.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary btn-arrow" href="https://github.com/RootRecord/rootrecord-business-manager-download/releases/latest" target="_blank" rel="noopener" data-testid="business-download-btn" style="background:var(--paper-2);color:var(--ink)">Download installer</a>
+              <a class="btn btn-secondary" href="/pricing.html" style="background:transparent;color:var(--paper-2);border-color:rgba(251,247,238,0.25)">See pricing</a>
+            </div>
+          </div>
 
-      <h2>Account and billing</h2>
-      <p>See <a href="/pricing.html">Pricing</a> for Free, Monthly, and Lifetime. Use <a href="/account.html">Account</a> to sign in and see subscription status. The <a href="/faq.html">FAQ</a> covers trials, read-only mode, and install questions.</p>
+          <div class="section-header" style="margin-top:3.5rem">
+            <div class="section-kicker">What you get</div>
+            <h2 class="section-title">Everything you need, <em>nothing more</em>.</h2>
+          </div>
 
-      <p><a href="/products.html">← All products</a></p>
+          <div class="features">
+            <div class="feature">
+              <div class="feature-icon">⏱</div>
+              <h3>Time &amp; work log</h3>
+              <p>Track time with sensible totals — overlapping clock intervals merge so minutes are never double-counted.</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">$</div>
+              <h3>Money &amp; clients</h3>
+              <p>Invoices, categories, projects, tags — clear books you can stand behind at tax time or on a client call.</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">☰</div>
+              <h3>Inventory &amp; supplies</h3>
+              <p>Track stock, supplies, and consumables alongside your work. Units, costs, and counts in one place.</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">◰</div>
+              <h3>Schedule</h3>
+              <p>A real schedule view for appointments, jobs, and recurring work — linked to clients and time entries.</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">⎚</div>
+              <h3>Reports &amp; exports</h3>
+              <p>Reports you can defend. Exports that match. Totals that reconcile between summary and detail views.</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">⌘</div>
+              <h3>Optional cloud</h3>
+              <p>Sign in for subscription, sync, and optional cloud backup — only when you actually want those features.</p>
+            </div>
+          </div>
+
+          <div class="container-narrow prose" style="margin-top:3rem">
+            <h2>Account &amp; billing</h2>
+            <p>See <a href="/pricing.html">Pricing</a> for Free, Monthly, and Lifetime. Use <a href="/account.html">Account</a> to sign in and see subscription status. The <a href="/faq.html">FAQ</a> covers trials, read-only mode, and install questions.</p>
+            <p><a href="/products.html">← All products</a></p>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-      <a href="https://rootrecord.info/">rootrecord.info</a>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="/"><span class="brand-mark">R</span>RootRecord</a>
+            <p>Local-first Windows desktop software for people who run real operations — with optional cloud when you choose it.</p>
+          </div>
+          <div class="footer-col"><h4>Products</h4><ul><li><a href="/rootrecord-business-manager.html">Business Manager</a></li><li><a href="/rootrecord-weather-manager.html">Weather Manager</a></li><li><a href="/products.html">All products</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div>
+          <div class="footer-col"><h4>Company</h4><ul><li><a href="/about.html">About</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/account.html">Account</a></li></ul></div>
+          <div class="footer-col"><h4>Community</h4><ul><li><a href="https://discord.gg/CPaDYuFkU" target="_blank" rel="noopener">Discord</a></li><li><a href="https://x.com/RootRecord" target="_blank" rel="noopener">X (Twitter)</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/privacy.html">Privacy</a></li></ul></div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="yr">2026</span> RootRecord · <a href="https://rootrecord.info/">rootrecord.info</a></span>
+          <span>Built local-first on Windows.</span>
+        </div>
+      </div>
     </footer>
   </div>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>

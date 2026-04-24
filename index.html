@@ -1,59 +1,256 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RootRecord — Local-first desktop software for Windows</title>
-  <meta name="description" content="RootRecord builds local-first Windows desktop programs for operations, time and money, weather and hazards, with optional cloud when you choose it.">
+  <meta name="description" content="RootRecord builds local-first Windows desktop software for operations, time, money, weather and hazards. Your data stays on your machine. Optional cloud when you choose it.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Geist:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <div class="page">
-    <nav>
-      <a href="/">Home</a>
-      <a href="/products.html">Products</a>
-      <a href="/pricing.html">Pricing</a>
-      <a href="/about.html">About</a>
-      <a href="/faq.html">FAQ</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-      <a href="/account.html">Account</a>
-    </nav>
-
-    <header>
-      <h1>RootRecord</h1>
-      <p class="tagline">Practical desktop software for people who run real operations</p>
+  <div class="site">
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <a class="brand" href="/" data-testid="brand-home-link">
+          <span class="brand-mark">R</span>
+          RootRecord
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-testid="nav-toggle-btn" onclick="document.querySelector('.site-nav').classList.toggle('is-open');this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true');">
+          Menu
+        </button>
+        <nav class="site-nav" data-testid="primary-nav">
+          <a href="/" aria-current="page">Home</a>
+          <a href="/products.html">Products</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about.html">About</a>
+          <a href="/faq.html">FAQ</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/account.html" class="nav-cta" data-testid="nav-account-cta">Account →</a>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <p class="lead">We ship <strong>Windows</strong> programs that keep <span class="highlight">your working data on your machine</span> by default, with clear paths to optional online account, subscription, sync, and backup when a product supports them.</p>
+    <main class="site-main">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="fade-up">
+            <span class="eyebrow">Made for Windows · Local-first</span>
+            <h1 class="hero-title">Software that respects your <em>data</em>, your <em>time</em>, and your <em>work</em>.</h1>
+            <p class="hero-lead">RootRecord builds desktop programs for people who run real operations. Your working data lives on your machine by default — with optional cloud, sync, and backup when you choose them.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary btn-arrow" href="/products.html" data-testid="hero-primary-cta">Explore products</a>
+              <a class="btn btn-secondary" href="/pricing.html" data-testid="hero-secondary-cta">See pricing</a>
+            </div>
+            <div class="hero-meta">
+              <span class="hero-meta-item">Windows 10 &amp; 11</span>
+              <span class="hero-meta-item">Offline-first core</span>
+              <span class="hero-meta-item">Lifetime plan available</span>
+            </div>
+          </div>
 
-      <section class="card">
-        <h2>Explore our programs</h2>
-        <p>Business operations, time and money, inventory and reports, weather and hazards—each product has its own overview, install links, and details.</p>
-        <p class="cta-row">
-          <a class="btn" href="/products.html">View products</a>
-          <a class="btn btn-secondary" href="/pricing.html">See pricing</a>
-        </p>
+          <div class="fade-up delay-2" aria-hidden="true">
+            <div class="hero-visual">
+              <div class="app-window">
+                <div class="app-chrome">
+                  <span class="app-dot"></span><span class="app-dot"></span><span class="app-dot"></span>
+                  <span class="app-title">RootRecord Business Manager — Dashboard</span>
+                </div>
+                <div class="app-body">
+                  <aside class="app-side">
+                    <span class="app-side-item is-active">Dashboard</span>
+                    <span class="app-side-item">Time &amp; work</span>
+                    <span class="app-side-item">Money</span>
+                    <span class="app-side-item">Clients</span>
+                    <span class="app-side-item">Inventory</span>
+                    <span class="app-side-item">Reports</span>
+                  </aside>
+                  <div class="app-main">
+                    <div class="app-kpi-row">
+                      <div class="app-kpi"><div class="app-kpi-label">Hours · week</div><div class="app-kpi-value">42.5</div></div>
+                      <div class="app-kpi"><div class="app-kpi-label">Billed</div><div class="app-kpi-value">$8,240</div></div>
+                      <div class="app-kpi"><div class="app-kpi-label">Open</div><div class="app-kpi-value">12</div></div>
+                    </div>
+                    <div class="app-chart">
+                      <span class="bar" style="height:38%"></span>
+                      <span class="bar" style="height:62%"></span>
+                      <span class="bar" style="height:44%"></span>
+                      <span class="bar" style="height:78%"></span>
+                      <span class="bar" style="height:55%"></span>
+                      <span class="bar" style="height:90%"></span>
+                      <span class="bar" style="height:68%"></span>
+                      <span class="bar" style="height:82%"></span>
+                      <span class="bar" style="height:48%"></span>
+                      <span class="bar" style="height:72%"></span>
+                      <span class="bar" style="height:60%"></span>
+                      <span class="bar" style="height:85%"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hero-badge">
+                <div class="hero-badge-icon">✓</div>
+                <div>
+                  <strong>Local database</strong>
+                  <span>Stored on your PC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <h2>Principles</h2>
-      <ul>
-        <li><strong>Local-first</strong> — your operational databases stay on your PC unless you move them or turn on cloud features.</li>
-        <li><strong>Clear books</strong> — totals and exports you can stand behind.</li>
-        <li><strong>Optional cloud</strong> — sync and backup only when you enable them.</li>
-      </ul>
+      <!-- PRINCIPLES STRIP -->
+      <section class="container">
+        <div class="principles">
+          <div class="principle">
+            <div class="principle-num">01 / Local-first</div>
+            <h3>Your data, your disk</h3>
+            <p>Operational databases stay on your PC unless you move them or enable optional cloud features.</p>
+          </div>
+          <div class="principle">
+            <div class="principle-num">02 / Clear books</div>
+            <h3>Totals you can defend</h3>
+            <p>Overlapping clock intervals merge for unique coverage — no double-counted minutes in reports and exports.</p>
+          </div>
+          <div class="principle">
+            <div class="principle-num">03 / Optional cloud</div>
+            <h3>Sync when you want it</h3>
+            <p>Subscription, sync, and secure online backup are opt-in. Core workflows run offline.</p>
+          </div>
+        </div>
+      </section>
 
-      <p>Questions? See <a href="/pricing.html">Pricing</a>, the <a href="/faq.html">FAQ</a>, or <a href="/contact.html">Contact</a>, or join us on <a href="https://discord.gg/CPaDYuFkU" target="_blank" rel="noopener">Discord</a>. <a href="/account.html">Account</a> for sign-in and subscription on the web. Legal: <a href="/terms.html">Terms</a> and <a href="/privacy.html">Privacy</a>.</p>
+      <!-- FEATURES -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">What we build</div>
+            <h2 class="section-title">Practical desktop tools, <em>carefully made</em>.</h2>
+            <p class="section-lead">Each program solves a specific problem end-to-end — without pushing your data into someone else's cloud.</p>
+          </div>
+
+          <ul class="products-grid" data-testid="home-products-list">
+            <li>
+              <a class="product-card" href="/rootrecord-business-manager.html" data-testid="product-card-business">
+                <span class="product-card-tag">For operators</span>
+                <h3 class="product-card-title">RootRecord Business Manager</h3>
+                <p class="product-card-desc">Time, money, clients, inventory, scheduling, work log, and reports in one local-first workspace for Windows.</p>
+                <span class="product-card-cta">View product page</span>
+              </a>
+            </li>
+            <li>
+              <a class="product-card" href="/rootrecord-weather-manager.html" data-testid="product-card-weather">
+                <span class="product-card-tag">For awareness</span>
+                <h3 class="product-card-title">Root Record Weather Manager</h3>
+                <p class="product-card-desc">Weather, alerts, earthquakes, and hazard context for the places you care about — without juggling browser tabs.</p>
+                <span class="product-card-cta">View product page</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- WHY / FEATURE GRID -->
+      <section class="section" style="padding-top:0">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Principles in practice</div>
+            <h2 class="section-title">Why people choose <em>RootRecord</em>.</h2>
+          </div>
+          <div class="features">
+            <div class="feature">
+              <div class="feature-icon">⌂</div>
+              <h3>On your machine</h3>
+              <p>Your primary database is a file on your PC. Back it up like any other important file — or let the app run scheduled local backups.</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">⊙</div>
+              <h3>Offline-first</h3>
+              <p>Core workflows never depend on a connection. Sign-in, sync, and cloud backup are used only when you enable them.</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">Σ</div>
+              <h3>Honest totals</h3>
+              <p>Hours worked, categories, exports — numbers reconcile by design. No surprises when it's time for reports and invoices.</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">⇅</div>
+              <h3>Optional cloud</h3>
+              <p>A clean path to subscription, sync, and secure online backup. One account across RootRecord apps when you want it.</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">↻</div>
+              <h3>Regular updates</h3>
+              <p>Signed Windows installers on GitHub Releases. Each build is noted so you always know what's running.</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">♦</div>
+              <h3>Lifetime option</h3>
+              <p>One payment for ongoing access to current and future RootRecord programs — so the tool grows with your work.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA BAND -->
+      <section class="container">
+        <div class="cta-band">
+          <h2 class="cta-band-title">Start with the <em>program</em> that matches your work.</h2>
+          <p class="cta-band-lead">Browse products, review pricing, or jump straight to your account to manage a subscription. Questions? The FAQ has straight answers.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary btn-arrow" href="/products.html" data-testid="cta-band-products">View products</a>
+            <a class="btn btn-secondary" href="/pricing.html" data-testid="cta-band-pricing">See pricing</a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-      <a href="https://rootrecord.info/">rootrecord.info</a>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="/"><span class="brand-mark">R</span>RootRecord</a>
+            <p>Local-first Windows desktop software for people who run real operations — with optional cloud when you choose it.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Products</h4>
+            <ul>
+              <li><a href="/rootrecord-business-manager.html">Business Manager</a></li>
+              <li><a href="/rootrecord-weather-manager.html">Weather Manager</a></li>
+              <li><a href="/products.html">All products</a></li>
+              <li><a href="/pricing.html">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/faq.html">FAQ</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+              <li><a href="/account.html">Account</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Community</h4>
+            <ul>
+              <li><a href="https://discord.gg/CPaDYuFkU" target="_blank" rel="noopener">Discord</a></li>
+              <li><a href="https://x.com/RootRecord" target="_blank" rel="noopener">X (Twitter)</a></li>
+              <li><a href="/terms.html">Terms</a></li>
+              <li><a href="/privacy.html">Privacy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="yr">2026</span> RootRecord · <a href="https://rootrecord.info/">rootrecord.info</a></span>
+          <span>Built local-first on Windows.</span>
+        </div>
+      </div>
     </footer>
   </div>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>

@@ -1,51 +1,93 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — RootRecord</title>
-  <meta name="description" content="Contact RootRecord: support channels for RootRecord products and rootrecord.info account.">
+  <meta name="description" content="Contact RootRecord: support channels for RootRecord products and the rootrecord.info account.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Geist:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <div class="page">
-    <nav>
-      <a href="/">Home</a>
-      <a href="/products.html">Products</a>
-      <a href="/pricing.html">Pricing</a>
-      <a href="/about.html">About</a>
-      <a href="/faq.html">FAQ</a>
-      <a href="/contact.html" aria-current="page">Contact</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-      <a href="/account.html">Account</a>
-    </nav>
-
-    <header>
-      <h1>Contact</h1>
-      <p class="tagline">RootRecord products and account</p>
+  <div class="site">
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <a class="brand" href="/"><span class="brand-mark">R</span>RootRecord</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="document.querySelector('.site-nav').classList.toggle('is-open');this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true');">Menu</button>
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/products.html">Products</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about.html">About</a>
+          <a href="/faq.html">FAQ</a>
+          <a href="/contact.html" aria-current="page">Contact</a>
+          <a href="/account.html" class="nav-cta">Account →</a>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <p>For questions about <strong>RootRecord</strong> software, your <strong>rootrecord.info</strong> account, Terms, Privacy, or billing, use the channels below. <strong>Install links</strong> for each program are on <a href="/products.html">Products</a>.</p>
+    <main class="site-main">
+      <section class="page-header">
+        <div class="container">
+          <div class="page-header-inner">
+            <p class="breadcrumb">Contact</p>
+            <h1 class="page-title">Get in <em>touch</em>.</h1>
+            <p class="page-lead">For questions about RootRecord software, your rootrecord.info account, Terms, Privacy, or billing — here's where to find us.</p>
+          </div>
+        </div>
+      </section>
 
-      <h2>Channels</h2>
-      <ul>
-        <li><a href="https://discord.gg/CPaDYuFkU" target="_blank" rel="noopener">Discord</a> — community chat and help</li>
-        <li><a href="https://x.com/RootRecord" target="_blank" rel="noopener">X (Twitter)</a> — @RootRecord</li>
-        <li><a href="https://rootrecord.info/community">Community</a></li>
-      </ul>
+      <section class="section">
+        <div class="container">
+          <div class="features" data-testid="contact-channels">
+            <a class="feature" href="https://discord.gg/CPaDYuFkU" target="_blank" rel="noopener" style="text-decoration:none" data-testid="contact-discord">
+              <div class="feature-icon">◈</div>
+              <h3>Discord</h3>
+              <p>Community chat, peer help, and a direct line for product questions. The fastest way to reach us.</p>
+            </a>
+            <a class="feature" href="https://x.com/RootRecord" target="_blank" rel="noopener" style="text-decoration:none" data-testid="contact-x">
+              <div class="feature-icon">𝕏</div>
+              <h3>X (Twitter)</h3>
+              <p>Announcements and updates from <strong style="color:var(--ink)">@RootRecord</strong>. DMs are open for short questions.</p>
+            </a>
+            <a class="feature" href="https://rootrecord.info/community" style="text-decoration:none" data-testid="contact-community">
+              <div class="feature-icon">◎</div>
+              <h3>Community hub</h3>
+              <p>Longer-form discussions, feature requests, and updates from the RootRecord community.</p>
+            </a>
+          </div>
 
-      <h2>Legal and policies</h2>
-      <p><a href="/terms.html">Terms of Service</a> · <a href="/privacy.html">Privacy Policy</a></p>
+          <div class="container-narrow prose" style="margin-top:3rem">
+            <h2>Install links</h2>
+            <p>Latest Windows installers for each program live on their product pages — see <a href="/products.html">Products</a>.</p>
+
+            <h2>Legal &amp; policies</h2>
+            <p><a href="/terms.html">Terms of Service</a> · <a href="/privacy.html">Privacy Policy</a></p>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-      <a href="/">Home</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="/"><span class="brand-mark">R</span>RootRecord</a>
+            <p>Local-first Windows desktop software for people who run real operations — with optional cloud when you choose it.</p>
+          </div>
+          <div class="footer-col"><h4>Products</h4><ul><li><a href="/rootrecord-business-manager.html">Business Manager</a></li><li><a href="/rootrecord-weather-manager.html">Weather Manager</a></li><li><a href="/products.html">All products</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div>
+          <div class="footer-col"><h4>Company</h4><ul><li><a href="/about.html">About</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/account.html">Account</a></li></ul></div>
+          <div class="footer-col"><h4>Community</h4><ul><li><a href="https://discord.gg/CPaDYuFkU" target="_blank" rel="noopener">Discord</a></li><li><a href="https://x.com/RootRecord" target="_blank" rel="noopener">X (Twitter)</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/privacy.html">Privacy</a></li></ul></div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="yr">2026</span> RootRecord · <a href="https://rootrecord.info/">rootrecord.info</a></span>
+          <span>Built local-first on Windows.</span>
+        </div>
+      </div>
     </footer>
   </div>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>

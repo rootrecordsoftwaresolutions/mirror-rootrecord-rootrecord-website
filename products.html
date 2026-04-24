@@ -4,57 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products — RootRecord</title>
-  <meta name="description" content="RootRecord desktop programs for Windows: Business Manager and Weather Manager.">
+  <meta name="description" content="RootRecord desktop programs for Windows: Business Manager and Weather Manager. Local-first, optional cloud.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Geist:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <div class="page">
-    <nav>
-      <a href="/">Home</a>
-      <a href="/products.html" aria-current="page">Products</a>
-      <a href="/pricing.html">Pricing</a>
-      <a href="/about.html">About</a>
-      <a href="/faq.html">FAQ</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-      <a href="/account.html">Account</a>
-    </nav>
-
-    <header>
-      <h1>Products</h1>
-      <p class="tagline">Windows desktop software from RootRecord</p>
+  <div class="site">
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <a class="brand" href="/"><span class="brand-mark">R</span>RootRecord</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="document.querySelector('.site-nav').classList.toggle('is-open');this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true');">Menu</button>
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/products.html" aria-current="page">Products</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about.html">About</a>
+          <a href="/faq.html">FAQ</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/account.html" class="nav-cta">Account →</a>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <p class="lead">Each program has its own page with <strong>what it does</strong>, <strong>how your data is handled</strong>, and <strong>where to install</strong>.</p>
+    <main class="site-main">
+      <section class="page-header">
+        <div class="container">
+          <div class="page-header-inner">
+            <p class="breadcrumb" data-testid="breadcrumb">Products</p>
+            <h1 class="page-title">All <em>products</em>, on your Windows PC.</h1>
+            <p class="page-lead">Each program has its own page — what it does, how your data is handled, and where to install.</p>
+          </div>
+        </div>
+      </section>
 
-      <ul class="product-cards">
-        <li>
-          <a class="product-card" href="/rootrecord-business-manager.html">
-            <span class="product-card-title">RootRecord Business Manager</span>
-            <span class="product-card-desc">Time, money, clients, inventory, scheduling, work log, and reports in one local-first workspace.</span>
-            <span class="product-card-cta">View product page</span>
-          </a>
-        </li>
-        <li>
-          <a class="product-card" href="/rootrecord-weather-manager.html">
-            <span class="product-card-title">Root Record Weather Manager</span>
-            <span class="product-card-desc">Weather, alerts, earthquakes, and hazard context for the places you care about—without juggling browser tabs.</span>
-            <span class="product-card-cta">View product page</span>
-          </a>
-        </li>
-      </ul>
+      <section class="section">
+        <div class="container">
+          <ul class="products-grid" data-testid="all-products-list">
+            <li>
+              <a class="product-card" href="/rootrecord-business-manager.html" data-testid="products-card-business">
+                <span class="product-card-tag">For operators</span>
+                <h3 class="product-card-title">RootRecord Business Manager</h3>
+                <p class="product-card-desc">Time, money, clients, inventory, scheduling, work log, and reports in one local-first workspace. Built for independent shops and small teams that want real control.</p>
+                <span class="product-card-cta">View product page</span>
+              </a>
+            </li>
+            <li>
+              <a class="product-card" href="/rootrecord-weather-manager.html" data-testid="products-card-weather">
+                <span class="product-card-tag">For awareness</span>
+                <h3 class="product-card-title">Root Record Weather Manager</h3>
+                <p class="product-card-desc">Weather, alerts, earthquakes, and hazard context for the places you care about — a single calm desktop window instead of a dozen browser tabs.</p>
+                <span class="product-card-cta">View product page</span>
+              </a>
+            </li>
+          </ul>
 
-      <p class="note">Plans and prices: <a href="/pricing.html">Pricing</a>. Account and billing: <a href="/account.html">Account</a> and <a href="/faq.html">FAQ</a>. Chat with us on <a href="https://discord.gg/CPaDYuFkU" target="_blank" rel="noopener">Discord</a>.</p>
+          <p class="note" style="margin-top:2rem">Plans and prices: <a href="/pricing.html" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Pricing</a>. Account and billing: <a href="/account.html" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Account</a> · <a href="/faq.html" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">FAQ</a>. Chat with us on <a href="https://discord.gg/CPaDYuFkU" target="_blank" rel="noopener" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Discord</a>.</p>
+        </div>
+      </section>
     </main>
 
-    <footer>
-      <a href="https://rootrecord.info/">rootrecord.info</a>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="/"><span class="brand-mark">R</span>RootRecord</a>
+            <p>Local-first Windows desktop software for people who run real operations — with optional cloud when you choose it.</p>
+          </div>
+          <div class="footer-col"><h4>Products</h4><ul><li><a href="/rootrecord-business-manager.html">Business Manager</a></li><li><a href="/rootrecord-weather-manager.html">Weather Manager</a></li><li><a href="/products.html">All products</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div>
+          <div class="footer-col"><h4>Company</h4><ul><li><a href="/about.html">About</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/account.html">Account</a></li></ul></div>
+          <div class="footer-col"><h4>Community</h4><ul><li><a href="https://discord.gg/CPaDYuFkU" target="_blank" rel="noopener">Discord</a></li><li><a href="https://x.com/RootRecord" target="_blank" rel="noopener">X (Twitter)</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/privacy.html">Privacy</a></li></ul></div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="yr">2026</span> RootRecord · <a href="https://rootrecord.info/">rootrecord.info</a></span>
+          <span>Built local-first on Windows.</span>
+        </div>
+      </div>
     </footer>
   </div>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>

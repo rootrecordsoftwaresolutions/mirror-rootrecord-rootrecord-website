@@ -4,65 +4,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing — RootRecord</title>
-  <meta name="description" content="RootRecord plans: Free, Monthly, and Lifetime. Lifetime includes full access to all current and future programs and updates.">
+  <meta name="description" content="RootRecord pricing: Free, Monthly, and Lifetime plans. Lifetime includes full access to all current and future RootRecord programs and updates.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Geist:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <div class="page">
-    <nav>
-      <a href="/">Home</a>
-      <a href="/products.html">Products</a>
-      <a href="/pricing.html" aria-current="page">Pricing</a>
-      <a href="/about.html">About</a>
-      <a href="/faq.html">FAQ</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-      <a href="/account.html">Account</a>
-    </nav>
-
-    <header>
-      <h1>Pricing</h1>
-      <p class="tagline">Simple plans for RootRecord online account features</p>
+  <div class="site">
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <a class="brand" href="/"><span class="brand-mark">R</span>RootRecord</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="document.querySelector('.site-nav').classList.toggle('is-open');this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true');">Menu</button>
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/products.html">Products</a>
+          <a href="/pricing.html" aria-current="page">Pricing</a>
+          <a href="/about.html">About</a>
+          <a href="/faq.html">FAQ</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/account.html" class="nav-cta">Account →</a>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <p class="lead">Choose <strong>Free</strong> to get started, <strong>Monthly</strong> for a low ongoing price, or <strong>Lifetime</strong> for one payment and long-term peace of mind.</p>
+    <main class="site-main">
+      <section class="page-header">
+        <div class="container">
+          <div class="page-header-inner">
+            <p class="breadcrumb">Pricing</p>
+            <h1 class="page-title"><em>Simple</em> plans for online account features.</h1>
+            <p class="page-lead">Start free, go monthly for flexibility, or choose Lifetime once and keep access to every RootRecord program we release.</p>
+          </div>
+        </div>
+      </section>
 
-      <div class="pricing-grid">
-        <section class="card pricing-card">
-          <h2>Free</h2>
-          <p class="pricing-price"><strong>$0</strong></p>
-          <p>Start at no cost with <strong>limited access</strong> to online account features. Enough to explore and use the basics with RootRecord.</p>
-          <p class="note">Exact limits match what you see on the Billing page when you are on the Free plan.</p>
-        </section>
+      <section class="section">
+        <div class="container">
+          <div class="pricing-grid" data-testid="pricing-grid">
+            <section class="price-card" data-testid="plan-free">
+              <h2 class="price-name">Free</h2>
+              <p class="price-desc">Get started at no cost and explore the basics.</p>
+              <div class="price-amount-row">
+                <span class="price-amount">$0</span>
+              </div>
+              <ul class="price-feature-list">
+                <li>Limited access to online account features</li>
+                <li>Use RootRecord desktop apps (local-first)</li>
+                <li>Community support on Discord</li>
+              </ul>
+              <a class="btn btn-secondary btn-block" href="/account.html" data-testid="plan-free-cta">Create account</a>
+              <p class="price-note">Exact limits match what you see on the Billing page on the Free plan.</p>
+            </section>
 
-        <section class="card pricing-card">
-          <h2>Monthly</h2>
-          <p class="pricing-price"><strong>$4.99</strong> <span class="pricing-per">per month</span></p>
-          <p>Pay month to month for <strong>full access</strong> to eligible online account features while your subscription is active.</p>
-          <p class="note">Billed through our payment provider until you cancel, as described in <a href="/terms.html">Terms</a>.</p>
-        </section>
+            <section class="price-card is-featured" data-testid="plan-monthly">
+              <span class="price-card-tag">Popular</span>
+              <h2 class="price-name">Monthly</h2>
+              <p class="price-desc">Low ongoing price, cancel whenever you like.</p>
+              <div class="price-amount-row">
+                <span class="price-amount">$4.99</span>
+                <span class="price-per">/ month</span>
+              </div>
+              <ul class="price-feature-list">
+                <li>Full access to eligible online features</li>
+                <li>Subscription-linked desktop access</li>
+                <li>Trials where offered for new subscribers</li>
+                <li>Cancel at any time</li>
+              </ul>
+              <a class="btn btn-primary btn-block btn-arrow" href="/account.html" data-testid="plan-monthly-cta">Get started</a>
+              <p class="price-note">Billed through our payment provider until you cancel, as described in <a href="/terms.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Terms</a>.</p>
+            </section>
 
-        <section class="card pricing-card pricing-card-featured">
-          <h2>Lifetime</h2>
-          <p class="pricing-price"><strong>$150</strong> <span class="pricing-per">one time</span></p>
-          <p><strong>Full access</strong> for life to eligible online account features, plus <strong>full access to all future RootRecord programs and updates</strong> we release under this lifetime offering—one purchase, long-term support for the way you work.</p>
-          <p class="note">No recurring charge for this lifetime purchase. Details that apply at checkout are also shown on <a href="https://rootrecord.info/billing">Billing</a> when you buy or upgrade.</p>
-        </section>
-      </div>
+            <section class="price-card" data-testid="plan-lifetime">
+              <h2 class="price-name">Lifetime</h2>
+              <p class="price-desc">One payment. Long-term peace of mind.</p>
+              <div class="price-amount-row">
+                <span class="price-amount">$150</span>
+                <span class="price-per">one time</span>
+              </div>
+              <ul class="price-feature-list">
+                <li>Full access to eligible online features — for life</li>
+                <li>All current &amp; future RootRecord programs</li>
+                <li>All future updates included</li>
+                <li>No recurring charges, ever</li>
+              </ul>
+              <a class="btn btn-moss btn-block btn-arrow" href="/account.html" data-testid="plan-lifetime-cta">Buy lifetime</a>
+              <p class="price-note">Details that apply at checkout are shown on <a href="https://rootrecord.info/billing" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Billing</a>.</p>
+            </section>
+          </div>
 
-      <p class="note">Prices are shown in U.S. dollars. If you already use RootRecord, sign in on <a href="/account.html">Account</a> to see your current plan, or use billing in the desktop app.</p>
-
-      <p>Questions? See the <a href="/faq.html">FAQ</a> or <a href="/contact.html">Contact</a>.</p>
+          <p class="note" style="margin-top:2.5rem;text-align:center">Prices in U.S. dollars. Already use RootRecord? Sign in on <a href="/account.html" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Account</a> to see your current plan. Questions? <a href="/faq.html" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">FAQ</a> · <a href="/contact.html" style="color:var(--moss);text-decoration:underline;text-underline-offset:3px">Contact</a>.</p>
+        </div>
+      </section>
     </main>
 
-    <footer>
-      <a href="https://rootrecord.info/">rootrecord.info</a>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="/"><span class="brand-mark">R</span>RootRecord</a>
+            <p>Local-first Windows desktop software for people who run real operations — with optional cloud when you choose it.</p>
+          </div>
+          <div class="footer-col"><h4>Products</h4><ul><li><a href="/rootrecord-business-manager.html">Business Manager</a></li><li><a href="/rootrecord-weather-manager.html">Weather Manager</a></li><li><a href="/products.html">All products</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div>
+          <div class="footer-col"><h4>Company</h4><ul><li><a href="/about.html">About</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/account.html">Account</a></li></ul></div>
+          <div class="footer-col"><h4>Community</h4><ul><li><a href="https://discord.gg/CPaDYuFkU" target="_blank" rel="noopener">Discord</a></li><li><a href="https://x.com/RootRecord" target="_blank" rel="noopener">X (Twitter)</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/privacy.html">Privacy</a></li></ul></div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="yr">2026</span> RootRecord · <a href="https://rootrecord.info/">rootrecord.info</a></span>
+          <span>Built local-first on Windows.</span>
+        </div>
+      </div>
     </footer>
   </div>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>

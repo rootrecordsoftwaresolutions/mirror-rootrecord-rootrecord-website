@@ -7,92 +7,120 @@
   <meta name="description" content="RootRecord Terms of Service: RootRecord Business Manager for Windows, rootrecord.info account and billing, and related services.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Geist:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <div class="page">
-    <nav>
-      <a href="/">Home</a>
-      <a href="/products.html">Products</a>
-      <a href="/pricing.html">Pricing</a>
-      <a href="/about.html">About</a>
-      <a href="/faq.html">FAQ</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html" aria-current="page">Terms</a>
-      <a href="/account.html">Account</a>
-    </nav>
-
-    <header>
-      <h1>Terms of Service</h1>
-      <p class="tagline">Last updated: 2026-04-16</p>
+  <div class="site">
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <a class="brand" href="/"><span class="brand-mark">R</span>RootRecord</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" onclick="document.querySelector('.site-nav').classList.toggle('is-open');this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true');">Menu</button>
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/products.html">Products</a>
+          <a href="/pricing.html">Pricing</a>
+          <a href="/about.html">About</a>
+          <a href="/faq.html">FAQ</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/account.html" class="nav-cta">Account →</a>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <p>By using RootRecord’s <strong>websites</strong> (including <strong>rootrecord.info</strong>), <strong>RootRecord Business Manager</strong> desktop software for Windows, and related <strong>Services</strong>, you agree to these Terms. If you use the Services on behalf of an organization, you represent that you have authority to bind that organization.</p>
+    <main class="site-main">
+      <section class="page-header">
+        <div class="container">
+          <div class="page-header-inner">
+            <p class="breadcrumb">Terms</p>
+            <h1 class="page-title">Terms of Service.</h1>
+            <p class="page-lead">Last updated: 2026-04-16</p>
+          </div>
+        </div>
+      </section>
 
-      <h2>Acceptance</h2>
-      <p>By using the Services, you agree to these Terms.</p>
+      <section class="section">
+        <div class="container-narrow prose">
+          <p class="lead">By using RootRecord's <strong>websites</strong> (including <strong>rootrecord.info</strong>), <strong>RootRecord Business Manager</strong> desktop software for Windows, and related <strong>Services</strong>, you agree to these Terms. If you use the Services on behalf of an organization, you represent that you have authority to bind that organization.</p>
 
-      <h2>Description of services</h2>
-      <p><strong>RootRecord Business Manager</strong> is a <strong>Windows desktop application</strong> that stores your primary operational database <strong>locally</strong> on your device unless your organization configures otherwise. Optional features may contact RootRecord servers over a secure connection (for example subscription status, sync, or secure backup copy) when you enable or sign in to them.</p>
-      <p><strong>rootrecord.info</strong> provides <strong>account sign-up</strong>, <strong>billing</strong> (via our payment provider), and related web pages that support the desktop product and your subscription where applicable. Services are provided “as is” and may change over time.</p>
+          <h2>Acceptance</h2>
+          <p>By using the Services, you agree to these Terms.</p>
 
-      <h2>Accounts and your use</h2>
-      <p>You may register for an account. You are responsible for the accuracy of your information and for keeping your credentials secure. You agree to use the Services only for lawful purposes. You must not attempt to gain unauthorized access, disrupt the Services, or misuse other users’ data.</p>
+          <h2>Description of services</h2>
+          <p><strong>RootRecord Business Manager</strong> is a Windows desktop application that stores your primary operational database <strong>locally</strong> on your device unless your organization configures otherwise. Optional features may contact RootRecord servers over a secure connection (for example subscription status, sync, or secure backup copy) when you enable or sign in to them.</p>
+          <p><strong>rootrecord.info</strong> provides account sign-up, billing (via our payment provider), and related web pages that support the desktop product and your subscription where applicable. Services are provided "as is" and may change over time.</p>
 
-      <h2>Subscriptions and billing</h2>
-      <p>RootRecord offers a <strong>Free</strong> tier and a paid <strong>Supporter</strong> tier for eligible <strong>online</strong> account features. Payments for those plans are processed by our payment provider. See the <a href="https://rootrecord.info/billing">Billing</a> page for your plan and options. <strong>Desktop access</strong> may depend on the same account and subscription state where the product is set up that way; the application explains read-only or locked states in the UI.</p>
-      <ul>
-        <li><strong>Free tier:</strong> Account and features described on <a href="https://rootrecord.info/billing">Billing</a> at the time you subscribe or use the service. No payment required for the Free tier.</li>
-        <li><strong>Supporter:</strong> Paid tier for eligible <strong>online</strong> account features, as described on <a href="https://rootrecord.info/billing">Billing</a> (monthly, yearly, or lifetime options when offered).</li>
-        <li><strong>Free trial:</strong> 7-day trial for new monthly/yearly subscribers where offered. One trial per account unless we state otherwise.</li>
-        <li><strong>Payment and renewal:</strong> Recurring subscriptions are charged by our payment provider. Cancel from the Billing page via “Manage subscription.” Cancellation takes effect at the end of the billing period unless stated otherwise.</li>
-        <li><strong>Lifetime:</strong> One-time payment for permanent Supporter access where offered. No recurring charges for that purchase.</li>
-        <li>If you cancel or lapse, you return to Free. Data is retained subject to our <a href="/privacy.html">Privacy Policy</a>; premium features are restricted. Billing records for lapsed accounts may be stored for one year, then removed, as described in our policies.</li>
-        <li>We may delete accounts that are inactive or that breach these Terms. Deletion is irreversible.</li>
-      </ul>
+          <h2>Accounts and your use</h2>
+          <p>You may register for an account. You are responsible for the accuracy of your information and for keeping your credentials secure. You agree to use the Services only for lawful purposes. You must not attempt to gain unauthorized access, disrupt the Services, or misuse other users' data.</p>
 
-      <h2>Desktop software: your machine and your data</h2>
-      <p>You are responsible for securing the device where RootRecord Business Manager runs, for maintaining <strong>backups</strong> of your local database and exports, and for compliance with laws that apply to data you enter. We do not warrant that the desktop software will be error-free or compatible with every environment. Updates may be delivered via installers or in-app update flows as we provide them.</p>
+          <h2>Subscriptions and billing</h2>
+          <p>RootRecord offers a <strong>Free</strong> tier and a paid <strong>Supporter</strong> tier for eligible online account features. Payments for those plans are processed by our payment provider. See the <a href="https://rootrecord.info/billing">Billing</a> page for your plan and options. Desktop access may depend on the same account and subscription state where the product is set up that way; the application explains read-only or locked states in the UI.</p>
+          <ul>
+            <li><strong>Free tier:</strong> Account and features described on <a href="https://rootrecord.info/billing">Billing</a> at the time you subscribe or use the service. No payment required for the Free tier.</li>
+            <li><strong>Supporter:</strong> Paid tier for eligible online account features, as described on <a href="https://rootrecord.info/billing">Billing</a> (monthly, yearly, or lifetime options when offered).</li>
+            <li><strong>Free trial:</strong> 7-day trial for new monthly/yearly subscribers where offered. One trial per account unless we state otherwise.</li>
+            <li><strong>Payment and renewal:</strong> Recurring subscriptions are charged by our payment provider. Cancel from the Billing page via "Manage subscription." Cancellation takes effect at the end of the billing period unless stated otherwise.</li>
+            <li><strong>Lifetime:</strong> One-time payment for permanent Supporter access where offered. No recurring charges for that purchase.</li>
+            <li>If you cancel or lapse, you return to Free. Data is retained subject to our <a href="/privacy.html">Privacy Policy</a>; premium features are restricted. Billing records for lapsed accounts may be stored for one year, then removed, as described in our policies.</li>
+            <li>We may delete accounts that are inactive or that breach these Terms. Deletion is irreversible.</li>
+          </ul>
 
-      <h2>My Account, data export, and deletion</h2>
-      <p>From your profile you can download your account data and permanently delete your account where those features are available. Deletion may require password confirmation and can be irreversible. Our <a href="/privacy.html">Privacy Policy</a> describes what data we hold for online services. <strong>Local-only desktop data</strong> remains on your machine until you delete it or remove the application; use the app’s backup and export tools before uninstalling if you need copies.</p>
+          <h2>Desktop software: your machine and your data</h2>
+          <p>You are responsible for securing the device where RootRecord Business Manager runs, for maintaining backups of your local database and exports, and for compliance with laws that apply to data you enter. We do not warrant that the desktop software will be error-free or compatible with every environment. Updates may be delivered via installers or in-app update flows as we provide them.</p>
 
-      <h2 id="data-and-privacy">Data and privacy</h2>
-      <p>Your use is also governed by our <a href="/privacy.html">Privacy Policy</a>. You grant us the rights needed to operate the Services.</p>
-      <p>RootRecord can access and process content you provide to <strong>online</strong> Services as described in the Privacy Policy. Your privacy controls determine who else can see your content where applicable; the platform retains access for operations described there.</p>
-      <p>You agree that we may use data from AI report generation to create, train, and improve our own AI models (see <a href="/privacy.html#ai-models">Privacy Policy</a>). We do not use it to train third-party commercial models or sell your data.</p>
+          <h2>My Account, data export, and deletion</h2>
+          <p>From your profile you can download your account data and permanently delete your account where those features are available. Deletion may require password confirmation and can be irreversible. Our <a href="/privacy.html">Privacy Policy</a> describes what data we hold for online services. Local-only desktop data remains on your machine until you delete it or remove the application; use the app's backup and export tools before uninstalling if you need copies.</p>
 
-      <h2>Encryption and wallet services (no warranty)</h2>
-      <p><strong>No warranty.</strong> Encryption and wallet services are provided with no warranties. We serve as a data gatekeeper; you accept all risk. Self-custody is the gold standard. <strong>Client-only decryption:</strong> Where you keep decryption under your control, only you can decrypt. We cannot recover such data if you lose access.</p>
+          <h2 id="data-and-privacy">Data and privacy</h2>
+          <p>Your use is also governed by our <a href="/privacy.html">Privacy Policy</a>. You grant us the rights needed to operate the Services.</p>
+          <p>RootRecord can access and process content you provide to online Services as described in the Privacy Policy. Your privacy controls determine who else can see your content where applicable; the platform retains access for operations described there.</p>
+          <p>You agree that we may use data from AI report generation to create, train, and improve our own AI models (see <a href="/privacy.html#ai-models">Privacy Policy</a>). We do not use it to train third-party commercial models or sell your data.</p>
 
-      <h2>Availability and disclaimers</h2>
-      <p>We strive for reliability but do not guarantee uninterrupted service. <strong>Scheduled unavailability:</strong> Online services may be offline from <strong>12:00 a.m. to 5:00 a.m. HST</strong> each day (power saving) where that policy applies. The Services are not a substitute for professional advice. Time-remaining and other estimates are approximate.</p>
+          <h2>Encryption and wallet services (no warranty)</h2>
+          <p><strong>No warranty.</strong> Encryption and wallet services are provided with no warranties. We serve as a data gatekeeper; you accept all risk. Self-custody is the gold standard. <strong>Client-only decryption:</strong> Where you keep decryption under your control, only you can decrypt. We cannot recover such data if you lose access.</p>
 
-      <h2>Limitation of liability</h2>
-      <p>To the fullest extent permitted by law, RootRecord is not liable for indirect, incidental, special, or consequential damages, or for loss of data or profits. Our total liability is limited to the amount you paid us in the twelve months before the claim.</p>
+          <h2>Availability and disclaimers</h2>
+          <p>We strive for reliability but do not guarantee uninterrupted service. <strong>Scheduled unavailability:</strong> Online services may be offline from <strong>12:00 a.m. to 5:00 a.m. HST</strong> each day (power saving) where that policy applies. The Services are not a substitute for professional advice. Time-remaining and other estimates are approximate.</p>
 
-      <h2>Termination</h2>
-      <p>We may suspend or terminate your access if you breach these Terms or for operational or legal reasons. You may stop using the Services or delete your account at any time where available.</p>
+          <h2>Limitation of liability</h2>
+          <p>To the fullest extent permitted by law, RootRecord is not liable for indirect, incidental, special, or consequential damages, or for loss of data or profits. Our total liability is limited to the amount you paid us in the twelve months before the claim.</p>
 
-      <h2>Changes</h2>
-      <p>We may change these Terms. The “Last updated” date will change. Continued use means you accept the new Terms.</p>
+          <h2>Termination</h2>
+          <p>We may suspend or terminate your access if you breach these Terms or for operational or legal reasons. You may stop using the Services or delete your account at any time where available.</p>
 
-      <h2 id="affiliate">Affiliate links</h2>
-      <p>Some links (e.g. to Amazon) are affiliate links. Clicks may pass through our redirect pages. If you make a qualifying purchase, we may earn a commission. See our <a href="/privacy.html#affiliate">Privacy Policy</a> for logging details. Amazon and the Amazon logo are trademarks of Amazon.com, Inc.</p>
+          <h2>Changes</h2>
+          <p>We may change these Terms. The "Last updated" date will change. Continued use means you accept the new Terms.</p>
 
-      <h2>General</h2>
-      <p>These Terms are the entire agreement. If any part is unenforceable, the rest remains in effect. Our failure to enforce a right does not waive it.</p>
+          <h2 id="affiliate">Affiliate links</h2>
+          <p>Some links (e.g. to Amazon) are affiliate links. Clicks may pass through our redirect pages. If you make a qualifying purchase, we may earn a commission. See our <a href="/privacy.html#affiliate">Privacy Policy</a> for logging details. Amazon and the Amazon logo are trademarks of Amazon.com, Inc.</p>
 
-      <h2>Contact</h2>
-      <p>For questions, see our <a href="/">home page</a> or <a href="/contact.html">Contact</a> page.</p>
+          <h2>General</h2>
+          <p>These Terms are the entire agreement. If any part is unenforceable, the rest remains in effect. Our failure to enforce a right does not waive it.</p>
+
+          <h2>Contact</h2>
+          <p>For questions, see our <a href="/">home page</a> or <a href="/contact.html">Contact</a> page.</p>
+        </div>
+      </section>
     </main>
 
-    <footer>
-      <a href="/">Home</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="/"><span class="brand-mark">R</span>RootRecord</a>
+            <p>Local-first Windows desktop software for people who run real operations — with optional cloud when you choose it.</p>
+          </div>
+          <div class="footer-col"><h4>Products</h4><ul><li><a href="/rootrecord-business-manager.html">Business Manager</a></li><li><a href="/rootrecord-weather-manager.html">Weather Manager</a></li><li><a href="/products.html">All products</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div>
+          <div class="footer-col"><h4>Company</h4><ul><li><a href="/about.html">About</a></li><li><a href="/faq.html">FAQ</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/account.html">Account</a></li></ul></div>
+          <div class="footer-col"><h4>Community</h4><ul><li><a href="https://discord.gg/CPaDYuFkU" target="_blank" rel="noopener">Discord</a></li><li><a href="https://x.com/RootRecord" target="_blank" rel="noopener">X (Twitter)</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/privacy.html">Privacy</a></li></ul></div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="yr">2026</span> RootRecord · <a href="https://rootrecord.info/">rootrecord.info</a></span>
+          <span>Built local-first on Windows.</span>
+        </div>
+      </div>
     </footer>
   </div>
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>
