@@ -164,23 +164,19 @@ a { color: inherit; }
 }
 
 .brand-mark {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 9px;
-  background: linear-gradient(145deg, var(--moss) 0%, #1EB671 100%);
-  color: var(--ink-dark);
-  display: grid;
-  place-items: center;
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  font-weight: 700;
-  box-shadow: 0 0 0 1px rgba(173, 245, 204, 0.4), 0 8px 22px -8px rgba(63, 226, 141, 0.65), inset 0 -2px 0 rgba(0,0,0,0.15);
+  object-fit: cover;
+  display: block;
+  background: var(--moss-deep);
+  box-shadow: 0 0 0 1px rgba(173, 245, 204, 0.35), 0 8px 22px -8px rgba(63, 226, 141, 0.55);
   transition: transform .35s var(--ease-out), box-shadow .3s ease;
 }
 
 .brand:hover .brand-mark {
-  transform: rotate(-8deg) scale(1.06);
-  box-shadow: 0 0 0 1px rgba(173, 245, 204, 0.7), 0 12px 30px -8px rgba(63, 226, 141, 0.8), inset 0 -2px 0 rgba(0,0,0,0.2);
+  transform: rotate(-6deg) scale(1.06);
+  box-shadow: 0 0 0 1px rgba(173, 245, 204, 0.7), 0 12px 30px -8px rgba(63, 226, 141, 0.8);
 }
 
 .site-nav {
